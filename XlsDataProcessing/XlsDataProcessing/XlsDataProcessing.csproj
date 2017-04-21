@@ -90,6 +90,7 @@
     <Compile Include="Unit\CellsAndValue.Designer.cs">
       <DependentUpon>CellsAndValue.cs</DependentUpon>
     </Compile>
+    <Compile Include="Unit\CellsData.cs" />
     <Compile Include="Unit\CMDinfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
