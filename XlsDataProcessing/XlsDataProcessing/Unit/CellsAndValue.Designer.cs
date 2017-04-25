@@ -73,9 +73,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvCells;
         private System.Windows.Forms.DataGridViewTextBoxColumn cCells;
         private System.Windows.Forms.DataGridViewTextBoxColumn cValue;
+        private System.Windows.Forms.DataGridView dgvCells;
     }
 }

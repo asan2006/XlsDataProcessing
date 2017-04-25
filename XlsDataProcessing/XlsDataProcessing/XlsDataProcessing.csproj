@@ -7,7 +7,7 @@
     <ProjectGuid>{C93E8CC9-E325-460E-9F34-14797D4374A3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>XlsDataProcessing</RootNamespace>
-    <AssemblyName>数据处理 V0.1</AssemblyName>
+    <AssemblyName>Excel表格数据处理 V0.1</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -52,6 +52,11 @@
     <ApplicationIcon>Resources\XlsAnalysis.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -103,6 +108,7 @@
     <Compile Include="Unit\FolderList.Designer.cs">
       <DependentUpon>FolderList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Unit\XlsxHandle.cs" />
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +138,7 @@
     <EmbeddedResource Include="Unit\FolderList.resx">
       <DependentUpon>FolderList.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

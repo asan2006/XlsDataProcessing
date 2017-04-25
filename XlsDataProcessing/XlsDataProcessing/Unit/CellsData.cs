@@ -6,15 +6,21 @@ using System.Threading.Tasks;
 
 namespace XlsDataProcessing.Unit
 {
-    class CellsData
+    public class CellsData
     {
-        public string cellName
+        public CellsData(string paraCellName, string paraCellValue)
+        {
+            CellName = paraCellName;
+            CellValue = paraCellValue;
+        }
+
+        public string CellName
         {
             get;
             set;
         }
 
-        public string cellValue
+        public string CellValue
         {
             get;
             set;

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
+using System.IO;
 
 namespace XlsDataProcessing.Unit
 {
@@ -16,6 +17,40 @@ namespace XlsDataProcessing.Unit
         public FolderList()
         {
             InitializeComponent();
+        }
+
+        public List<DirectoryInfo> foldersList
+        {
+            get
+            {
+                List<DirectoryInfo> ls = new List<DirectoryInfo>();
+                if (lbFolder.Items.Count > 0)
+                {
+                    foreach (var item in lbFolder.Items)
+                    {
+                        ls.Add(new DirectoryInfo(item.ToString()));
+                    }
+                }
+                return ls;
+            }
+        }
+
+        public List<FileInfo> xlsFileList
+        {
+            get
+            {
+                List<FileInfo> ls = new List<FileInfo>();
+                if (lbFolder.Items.Count > 0)
+                {
+                    foreach (var f in lbFolder.Items)
+                    {
+                        DirectoryInfo di = new DirectoryInfo(f.ToString());
+                        FileInfo[] fis = di.GetFiles("*.xlsx");
+                        ls.AddRange(fis);
+                    }
+                }
+                return ls;
+            }
         }
 
         private void lbFolder_DragEnter(object sender, DragEventArgs e)

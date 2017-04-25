@@ -28,25 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.folderList1 = new XlsDataProcessing.Unit.FolderList();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.folderList1 = new XlsDataProcessing.Unit.FolderList();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cmDinfo1 = new XlsDataProcessing.Unit.CMDinfo();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cellsAndValue1 = new XlsDataProcessing.Unit.CellsAndValue();
             this.btnRun = new System.Windows.Forms.Button();
+            this.bgw = new System.ComponentModel.BackgroundWorker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // folderList1
-            // 
-            this.folderList1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.folderList1.Location = new System.Drawing.Point(3, 17);
-            this.folderList1.Name = "folderList1";
-            this.folderList1.Size = new System.Drawing.Size(355, 326);
-            this.folderList1.TabIndex = 0;
             // 
             // groupBox1
             // 
@@ -57,6 +50,14 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "文件夹列表";
+            // 
+            // folderList1
+            // 
+            this.folderList1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.folderList1.Location = new System.Drawing.Point(3, 17);
+            this.folderList1.Name = "folderList1";
+            this.folderList1.Size = new System.Drawing.Size(355, 326);
+            this.folderList1.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -89,6 +90,7 @@
             // 
             // cellsAndValue1
             // 
+            this.cellsAndValue1.blCellsData = null;
             this.cellsAndValue1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cellsAndValue1.Location = new System.Drawing.Point(3, 17);
             this.cellsAndValue1.Name = "cellsAndValue1";
@@ -99,10 +101,16 @@
             // 
             this.btnRun.Location = new System.Drawing.Point(373, 252);
             this.btnRun.Name = "btnRun";
-            this.btnRun.Size = new System.Drawing.Size(105, 42);
+            this.btnRun.Size = new System.Drawing.Size(125, 46);
             this.btnRun.TabIndex = 5;
-            this.btnRun.Text = "开始处理";
+            this.btnRun.Text = "Run";
             this.btnRun.UseVisualStyleBackColor = true;
+            this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
+            // 
+            // bgw
+            // 
+            this.bgw.WorkerReportsProgress = true;
+            this.bgw.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgw_DoWork);
             // 
             // CellsModifyPanel
             // 
@@ -122,13 +130,13 @@
         }
 
         #endregion
-
-        private Unit.FolderList folderList1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private Unit.CMDinfo cmDinfo1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private Unit.CellsAndValue cellsAndValue1;
         private System.Windows.Forms.Button btnRun;
+        private Unit.FolderList folderList1;
+        private Unit.CMDinfo cmDinfo1;
+        private Unit.CellsAndValue cellsAndValue1;
+        private System.ComponentModel.BackgroundWorker bgw;
     }
 }
