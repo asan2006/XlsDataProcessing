@@ -42,6 +42,7 @@
             this.txtInfo.Location = new System.Drawing.Point(0, 0);
             this.txtInfo.Multiline = true;
             this.txtInfo.Name = "txtInfo";
+            this.txtInfo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtInfo.Size = new System.Drawing.Size(233, 206);
             this.txtInfo.TabIndex = 0;
             // 
@@ -55,7 +56,7 @@
             // clearToolStripMenuItem
             // 
             this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
-            this.clearToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
             this.clearToolStripMenuItem.Text = "Clear";
             this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 

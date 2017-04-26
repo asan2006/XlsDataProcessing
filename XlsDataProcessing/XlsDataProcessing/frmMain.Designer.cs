@@ -41,7 +41,7 @@
             this.tpCellProcess.Location = new System.Drawing.Point(4, 22);
             this.tpCellProcess.Name = "tpCellProcess";
             this.tpCellProcess.Padding = new System.Windows.Forms.Padding(3);
-            this.tpCellProcess.Size = new System.Drawing.Size(876, 598);
+            this.tpCellProcess.Size = new System.Drawing.Size(628, 585);
             this.tpCellProcess.TabIndex = 0;
             this.tpCellProcess.Text = "修改温湿度信息";
             this.tpCellProcess.ToolTipText = "批量修改温湿度信息";
@@ -49,9 +49,10 @@
             // 
             // cellsModifyPanel1
             // 
-            this.cellsModifyPanel1.Location = new System.Drawing.Point(3, 0);
+            this.cellsModifyPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cellsModifyPanel1.Location = new System.Drawing.Point(3, 3);
             this.cellsModifyPanel1.Name = "cellsModifyPanel1";
-            this.cellsModifyPanel1.Size = new System.Drawing.Size(847, 586);
+            this.cellsModifyPanel1.Size = new System.Drawing.Size(622, 579);
             this.cellsModifyPanel1.TabIndex = 0;
             // 
             // tabControl1
@@ -61,14 +62,14 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(884, 624);
+            this.tabControl1.Size = new System.Drawing.Size(636, 611);
             this.tabControl1.TabIndex = 0;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 624);
+            this.ClientSize = new System.Drawing.Size(636, 611);
             this.Controls.Add(this.tabControl1);
             this.Name = "frmMain";
             this.Text = "Form1";

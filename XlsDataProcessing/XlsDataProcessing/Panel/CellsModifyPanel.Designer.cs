@@ -72,7 +72,10 @@
             // 
             // cmDinfo1
             // 
-            this.cmDinfo1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cmDinfo1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmDinfo1.AutoScroll = true;
             this.cmDinfo1.Location = new System.Drawing.Point(3, 17);
             this.cmDinfo1.Name = "cmDinfo1";
             this.cmDinfo1.Size = new System.Drawing.Size(618, 213);
