@@ -28,77 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.folderList1 = new XlsDataProcessing.Unit.FolderList();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cmDinfo1 = new XlsDataProcessing.Unit.CMDinfo();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.cellsAndValue1 = new XlsDataProcessing.Unit.CellsAndValue();
             this.btnRun = new System.Windows.Forms.Button();
             this.bgw = new System.ComponentModel.BackgroundWorker();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.folderList1 = new XlsDataProcessing.Unit.FolderList();
+            this.cellsAndValue1 = new XlsDataProcessing.Unit.CellsAndValue();
             this.SuspendLayout();
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.folderList1);
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(361, 346);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "文件夹列表";
-            // 
-            // folderList1
-            // 
-            this.folderList1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.folderList1.Location = new System.Drawing.Point(3, 17);
-            this.folderList1.Name = "folderList1";
-            this.folderList1.Size = new System.Drawing.Size(355, 326);
-            this.folderList1.TabIndex = 0;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.cmDinfo1);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox2.Location = new System.Drawing.Point(0, 355);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(624, 233);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "程序运行信息";
             // 
             // cmDinfo1
             // 
-            this.cmDinfo1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmDinfo1.AutoScroll = true;
-            this.cmDinfo1.Location = new System.Drawing.Point(3, 17);
+            this.cmDinfo1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.cmDinfo1.Location = new System.Drawing.Point(0, 355);
             this.cmDinfo1.Name = "cmDinfo1";
-            this.cmDinfo1.Size = new System.Drawing.Size(618, 213);
+            this.cmDinfo1.Size = new System.Drawing.Size(670, 245);
             this.cmDinfo1.TabIndex = 0;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.cellsAndValue1);
-            this.groupBox3.Location = new System.Drawing.Point(370, 3);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(248, 243);
-            this.groupBox3.TabIndex = 4;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "批量修改的单元格";
-            // 
-            // cellsAndValue1
-            // 
-            this.cellsAndValue1.blCellsData = null;
-            this.cellsAndValue1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cellsAndValue1.Location = new System.Drawing.Point(3, 17);
-            this.cellsAndValue1.Name = "cellsAndValue1";
-            this.cellsAndValue1.Size = new System.Drawing.Size(242, 223);
-            this.cellsAndValue1.TabIndex = 0;
+            this.cmDinfo1.TextTip = "程序运行信息";
             // 
             // btnRun
             // 
@@ -115,31 +60,42 @@
             this.bgw.WorkerReportsProgress = true;
             this.bgw.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgw_DoWork);
             // 
+            // folderList1
+            // 
+            this.folderList1.Location = new System.Drawing.Point(3, 3);
+            this.folderList1.Name = "folderList1";
+            this.folderList1.Size = new System.Drawing.Size(361, 346);
+            this.folderList1.TabIndex = 0;
+            this.folderList1.TextTip = "文件夹列表";
+            // 
+            // cellsAndValue1
+            // 
+            this.cellsAndValue1.blCellsData = null;
+            this.cellsAndValue1.Location = new System.Drawing.Point(373, 3);
+            this.cellsAndValue1.Name = "cellsAndValue1";
+            this.cellsAndValue1.Size = new System.Drawing.Size(245, 243);
+            this.cellsAndValue1.TabIndex = 0;
+            this.cellsAndValue1.TextTip = "批量修改单元格";
+            // 
             // CellsModifyPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.cmDinfo1);
+            this.Controls.Add(this.cellsAndValue1);
+            this.Controls.Add(this.folderList1);
             this.Controls.Add(this.btnRun);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
             this.Name = "CellsModifyPanel";
-            this.Size = new System.Drawing.Size(624, 588);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
+            this.Size = new System.Drawing.Size(670, 600);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnRun;
-        private Unit.FolderList folderList1;
         private Unit.CMDinfo cmDinfo1;
-        private Unit.CellsAndValue cellsAndValue1;
         private System.ComponentModel.BackgroundWorker bgw;
+        private Unit.FolderList folderList1;
+        private Unit.CellsAndValue cellsAndValue1;
     }
 }

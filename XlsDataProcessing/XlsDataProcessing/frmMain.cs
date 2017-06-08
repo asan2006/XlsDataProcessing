@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.IO;
 
 namespace XlsDataProcessing
 {
@@ -21,5 +22,6 @@ namespace XlsDataProcessing
             //程序名称及版本初始化
             Text = Assembly.GetEntryAssembly().GetName().Name;
         }
+
     }
 }

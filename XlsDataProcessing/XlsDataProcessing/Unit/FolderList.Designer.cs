@@ -33,7 +33,9 @@
             this.cms1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gbText = new System.Windows.Forms.GroupBox();
             this.cms1.SuspendLayout();
+            this.gbText.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbFolder
@@ -44,10 +46,10 @@
             this.lbFolder.FormattingEnabled = true;
             this.lbFolder.HorizontalScrollbar = true;
             this.lbFolder.ItemHeight = 12;
-            this.lbFolder.Location = new System.Drawing.Point(0, 0);
+            this.lbFolder.Location = new System.Drawing.Point(3, 17);
             this.lbFolder.Name = "lbFolder";
             this.lbFolder.ScrollAlwaysVisible = true;
-            this.lbFolder.Size = new System.Drawing.Size(167, 167);
+            this.lbFolder.Size = new System.Drawing.Size(355, 326);
             this.lbFolder.TabIndex = 0;
             this.lbFolder.DragDrop += new System.Windows.Forms.DragEventHandler(this.lbFolder_DragDrop);
             this.lbFolder.DragEnter += new System.Windows.Forms.DragEventHandler(this.lbFolder_DragEnter);
@@ -74,14 +76,26 @@
             this.clearToolStripMenuItem.Text = "Clear";
             this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
+            // gbText
+            // 
+            this.gbText.Controls.Add(this.lbFolder);
+            this.gbText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbText.Location = new System.Drawing.Point(0, 0);
+            this.gbText.Name = "gbText";
+            this.gbText.Size = new System.Drawing.Size(361, 346);
+            this.gbText.TabIndex = 1;
+            this.gbText.TabStop = false;
+            this.gbText.Text = "文件夹列表";
+            // 
             // FolderList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.lbFolder);
+            this.Controls.Add(this.gbText);
             this.Name = "FolderList";
-            this.Size = new System.Drawing.Size(167, 167);
+            this.Size = new System.Drawing.Size(361, 346);
             this.cms1.ResumeLayout(false);
+            this.gbText.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -92,5 +106,6 @@
         private System.Windows.Forms.ContextMenuStrip cms1;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clearToolStripMenuItem;
+        private System.Windows.Forms.GroupBox gbText;
     }
 }

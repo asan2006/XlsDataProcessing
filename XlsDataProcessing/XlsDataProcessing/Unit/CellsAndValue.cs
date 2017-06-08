@@ -24,6 +24,12 @@ namespace XlsDataProcessing.Unit
             //dgvCells.DataBindings.Add("DataSource", this, "blCellsData", false, DataSourceUpdateMode.OnPropertyChanged);
         }
 
+        public string TextTip
+        {
+            get { return gbText.Text; }
+            set { value = gbText.Text; }
+        }
+
         public List<CellsData> ListCellsData
         {
             get

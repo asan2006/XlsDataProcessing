@@ -19,6 +19,12 @@ namespace XlsDataProcessing.Unit
             InitializeComponent();
         }
 
+        public string TextTip
+        {
+            get { return gbText.Text; }
+            set { value = gbText.Text; }
+        }
+
         public List<DirectoryInfo> foldersList
         {
             get

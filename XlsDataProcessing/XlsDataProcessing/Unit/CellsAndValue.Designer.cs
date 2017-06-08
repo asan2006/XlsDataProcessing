@@ -31,7 +31,9 @@
             this.dgvCells = new System.Windows.Forms.DataGridView();
             this.cCells = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gbText = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCells)).BeginInit();
+            this.gbText.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvCells
@@ -42,10 +44,10 @@
             this.cCells,
             this.cValue});
             this.dgvCells.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvCells.Location = new System.Drawing.Point(0, 0);
+            this.dgvCells.Location = new System.Drawing.Point(3, 17);
             this.dgvCells.Name = "dgvCells";
             this.dgvCells.RowTemplate.Height = 23;
-            this.dgvCells.Size = new System.Drawing.Size(243, 226);
+            this.dgvCells.Size = new System.Drawing.Size(242, 169);
             this.dgvCells.TabIndex = 0;
             // 
             // cCells
@@ -60,14 +62,26 @@
             this.cValue.HeaderText = "值";
             this.cValue.Name = "cValue";
             // 
+            // gbText
+            // 
+            this.gbText.Controls.Add(this.dgvCells);
+            this.gbText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbText.Location = new System.Drawing.Point(0, 0);
+            this.gbText.Name = "gbText";
+            this.gbText.Size = new System.Drawing.Size(248, 189);
+            this.gbText.TabIndex = 1;
+            this.gbText.TabStop = false;
+            this.gbText.Text = "批量修改单元格";
+            // 
             // CellsAndValue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dgvCells);
+            this.Controls.Add(this.gbText);
             this.Name = "CellsAndValue";
-            this.Size = new System.Drawing.Size(243, 226);
+            this.Size = new System.Drawing.Size(248, 189);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCells)).EndInit();
+            this.gbText.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -76,5 +90,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cCells;
         private System.Windows.Forms.DataGridViewTextBoxColumn cValue;
         private System.Windows.Forms.DataGridView dgvCells;
+        private System.Windows.Forms.GroupBox gbText;
     }
 }

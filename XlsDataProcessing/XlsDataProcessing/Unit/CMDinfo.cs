@@ -5,6 +5,13 @@ namespace XlsDataProcessing.Unit
 {
     public partial class CMDinfo : UserControl
     {
+
+        public string TextTip
+        {
+            get { return gbText.Text; }
+            set { value = gbText.Text; }
+        }
+
         public CMDinfo()
         {
             InitializeComponent();
